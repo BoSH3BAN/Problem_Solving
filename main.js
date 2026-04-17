@@ -247,3 +247,57 @@ let sumOfPositives = (...nums)=> nums.filter(e=>e>-1).reduce((a,c)=>a+c,0);
 console.log(sumOfPositives(100,400,9,-800))
 console.log(sumOfPositives(-2,8,-9,0,2))
 console.log(sumOfPositives(-2,-8,-9,-2))
+
+/*
+    Sum Without The Highest And The Lowest Number
+    Codeophrenia
+    -3-
+*/
+
+function sumWithoutHighestAndLowest(...nums){
+    return  nums.length < 2 ? 0 : nums.reduce((a,c)=>a+c) - (Math.max(...nums)+Math.min(...nums));
+}
+
+console.log(sumWithoutHighestAndLowest(7,2,1))
+console.log(sumWithoutHighestAndLowest(1,2,3,4,5,6,7,9))
+console.log(sumWithoutHighestAndLowest(1,1,2,3,4,5,6,7,8,9,9))
+// // //
+let sumWithoutHighestAndLowest2 = (...nums) => nums === null?0:nums.sort().slice(1,-1).reduce((a,c)=>a+c);
+
+
+console.log(sumWithoutHighestAndLowest2(7,2,1))
+console.log(sumWithoutHighestAndLowest2(1,2,3,4,5,6,7,9))
+console.log(sumWithoutHighestAndLowest2(1,1,2,3,4,5,6,7,8,9,9))
+
+
+/*
+    String-Repeat
+    Codeophrenia
+    -4-
+*/
+
+let repeatStr = (n=0,s="") => s.repeat(n);
+
+console.log(repeatStr(10,"A"))
+//******************************************
+function repeatStr2(number,string){
+    let newStr = "";
+    for(i=0;i<number;i++){
+        newStr+=string
+    }
+    return newStr;
+}
+
+console.log(repeatStr2(10,"A"))
+
+
+/*
+    Convert Number To Reversed Array
+    Codeophrenia
+    -4-
+*/
+
+let convertNumToReversedArr = (num) => [...String(num)].reverse();
+
+console.log(convertNumToReversedArr(742598))
+console.log(742598)
