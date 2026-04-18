@@ -1,3 +1,4 @@
+console.log(new URL("https://www.youtube.com/playlist?list=PLDoPjvoNmBAxCjHi-HIfNoZrMkfbuvVDY").href)
 /*
     Find The Missing Letter
     ======== 13 ===========   
@@ -224,6 +225,7 @@ console.log(addCommasAndUnderscore3(123456789))
 console.log(addCommasAndUnderscore3(123456789112))
 console.log(addCommasAndUnderscore3(12345678911234))
 
+console.log(new URL("https://www.youtube.com/playlist?list=PL3iticg1TvA-jMsFwDgdb6Cy_L__qL56H").href)
 
 /*
     Even Or Odd
@@ -294,10 +296,54 @@ console.log(repeatStr2(10,"A"))
 /*
     Convert Number To Reversed Array
     Codeophrenia
-    -4-
+    -5-
 */
 
 let convertNumToReversedArr = (num) => [...String(num)].reverse();
 
 console.log(convertNumToReversedArr(742598))
 console.log(742598)
+
+/*
+    Counting Sheep
+    Codeophrenia
+    -6-
+*/
+
+function countingSheep(...sheep){
+    return `${sheep.filter((e)=>e===true).length} Sheep Presented`
+}
+
+console.log(
+countingSheep(true,true,true,false,true,true,true,
+    true,true,false,true,false,true,false,true,true,
+    true,true,false,false,true,true
+)
+)
+
+
+
+/*
+    Get Opposite
+    Codeophrenia
+    -7-
+*/
+let getOpposite = (n)=>-n;
+
+
+console.log(getOpposite(-50))
+console.log(getOpposite(60))
+console.log(getOpposite(-80))
+
+
+/*
+    Return Negative
+    Codeophrenia
+    -7-
+*/
+
+let returnNegative = (n=0)=>n>0?-n:n;
+
+console.log(returnNegative(-10))
+console.log(returnNegative(10))
+console.log(returnNegative(0))
