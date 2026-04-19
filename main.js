@@ -339,7 +339,7 @@ console.log(getOpposite(-80))
 /*
     Return Negative
     Codeophrenia
-    -7-
+    -8-
 */
 
 let returnNegative = (n=0)=>n>0?-n:n;
@@ -347,3 +347,43 @@ let returnNegative = (n=0)=>n>0?-n:n;
 console.log(returnNegative(-10))
 console.log(returnNegative(10))
 console.log(returnNegative(0))
+
+
+
+/*
+    Jenny's secret
+    Codeophrenia
+    -9-
+*/
+
+let greet = (n) => {
+    let regExp = /^johnny$/i;
+    switch (n) {
+        case undefined:
+            return "Write A Name";
+            break;
+        case  regExp.test(n)?n.match(regExp).input:false:
+            return `Hello, my Darling ${n}`;
+            break;
+            default: 
+            return `Hello, ${n}`;
+    };
+};
+
+console.log(greet())
+console.log(greet("JohnnY"))
+console.log(greet("johny"))
+console.log(greet("joHnNy"))
+
+console.log("/".repeat(20))
+
+let greet2 = (n) => {
+    return /^johnny$/i.test(n)?`Hello, my Love ${n}`:n === undefined?
+    "Write A Name":`Welcome,${n}`;
+};
+
+
+console.log(greet2())
+console.log(greet2("JohnnY"))
+console.log(greet2("johny"))
+console.log(greet2("joHnNyjoHnNy"))
