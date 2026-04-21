@@ -387,3 +387,35 @@ console.log(greet2())
 console.log(greet2("JohnnY"))
 console.log(greet2("johny"))
 console.log(greet2("joHnNyjoHnNy"))
+
+/*
+    A Needle In The HayStack
+    Codeophrenia
+    -10-
+*/
+
+let findNeedle = (...data)=>`Found The Needle At Position ${data.indexOf(data.filter((e=>/^needle$/i.test(e)))[0])}`.replace(/.+-1/i,"Not Found Needle");
+console.log("/".repeat(66))
+console.log(findNeedle("hay","junk","hay","hay","moreJunk","needle"))
+console.log(findNeedle("hay","junk","hay","needle","hay","moreJunk"))
+console.log(findNeedle("hay","junk","hay","hay","moreJunk"))
+console.log(findNeedle("neeDLE","junk","hay","hay","moreJunk"))
+console.log(findNeedle("junk","hay","hay","moreJunk"))
+
+
+function findNeedle2(...data){
+    let resault = `NOt Found The Needle`;
+    for(let i = 0 ; i<data.length ; i++){
+        if(/^needle$/i.test(data[i]) === true ){
+            resault = `Found The Needle At Position ${i}`
+        }
+    }
+    return resault ;
+}
+
+console.log("/".repeat(66))
+console.log(findNeedle2("hay","junk","hay","hay","moreJunk","needle"))
+console.log(findNeedle2("hay","junk","hay","needle","hay","moreJunk"))
+console.log(findNeedle2("hay","junk","hay","hay","moreJunk"))
+console.log(findNeedle2("neeDLE","junk","hay","hay","moreJunk"))
+console.log(findNeedle2("junk","hay","hay","moreJunk"))
