@@ -419,3 +419,95 @@ console.log(findNeedle2("hay","junk","hay","needle","hay","moreJunk"))
 console.log(findNeedle2("hay","junk","hay","hay","moreJunk"))
 console.log(findNeedle2("neeDLE","junk","hay","hay","moreJunk"))
 console.log(findNeedle2("junk","hay","hay","moreJunk"))
+
+
+/*
+    Count Positives Sum Negatives
+    Codeophrenia
+    -11-
+*/
+
+function countPositivesSumNegatives (...data){
+    let p = data.filter((e)=>e>0).length;
+    let n = data.filter((e)=>e<0).reduce((a,c)=>a+c,0);
+    return [p,n]
+}
+
+console.log(countPositivesSumNegatives(5,-30,8,-10,6,-10,9,7))
+console.log(countPositivesSumNegatives(1,2,3,4,5,6,7,8,9,10,-11,-12,-13,-14,-15))
+console.log(countPositivesSumNegatives())
+/*
+    Double Char
+    Codeophrenia
+    -12-
+*/
+
+function doubleChar(input){
+    return [...input.toString()].map((e)=>e+e).join("")
+}
+
+console.log(doubleChar(123))
+console.log(doubleChar("A1B2C3/"))
+console.log(doubleChar("Hello World"))
+
+/*
+    Basic Mathematical
+    Codeophrenia
+    -13-
+*/
+
+function basicOp(operation,value1,value2){
+    return operation === "+" ?value1+value2:operation === "-" ?value1-value2:
+    operation === "*" ?value1*value2:operation === "/" ?value1/value2:"";
+};
+
+
+console.log(basicOp(`+`,4,7))
+console.log(basicOp(`-`,15,18))
+console.log(basicOp(`*`,5,5))
+console.log(basicOp(`/`,49,7))
+
+
+console.log("-".repeat(55))
+
+
+function basicOp2(operation,value1,value2){
+    return eval(value1+operation+value2)
+};
+
+
+console.log(basicOp2(`+`,4,7))
+console.log(basicOp2(`-`,15,18))
+console.log(basicOp2(`*`,5,5))
+console.log(basicOp2(`/`,49,7))
+
+
+/*
+To Square Root Or Not To Square Root
+    Codeophrenia
+    -14-
+*/
+console.log("-".repeat(55))
+
+function squareOrSquareRoot(...data){
+    let myNewArr = [];
+    for(let i = 0 ; i<data.length; i++){
+        if(Number.isInteger(Math.sqrt(data[i]))){
+            myNewArr.push(Math.sqrt(data[i]))
+        }else{
+            myNewArr.push(data[i]**2)
+        }
+    }
+    return myNewArr;
+}
+
+console.log(squareOrSquareRoot(5,9,7,2,8))
+
+console.log("-".repeat(55))
+
+function squareOrSquareRoot2(...data){
+    return data.map((e)=>Number.isInteger(Math.sqrt(e))?Math.sqrt(e):e**2);
+}
+
+console.log(squareOrSquareRoot2(5,9,7,2,8))
+console.log(squareOrSquareRoot2(4,3,9,7,2,1))
