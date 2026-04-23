@@ -511,3 +511,82 @@ function squareOrSquareRoot2(...data){
 
 console.log(squareOrSquareRoot2(5,9,7,2,8))
 console.log(squareOrSquareRoot2(4,3,9,7,2,1))
+
+/*
+    Count By X
+    Codeophrenia
+    -15-
+*/
+
+console.log("-".repeat(55))
+
+function countby(x,n){
+    let z = [];
+    for(let i = 1 ; i<n+1;i++){
+        z.push(i*x)
+    }
+    return z;
+}
+
+console.log(countby(1,10))
+console.log(countby(2,5))
+
+console.log("-".repeat(55))
+
+function countby2(x,n){
+    return Array.from(Array(n).keys()).map((e)=>e+=1).map((e)=>e*x) ;
+}
+
+console.log(countby2(1,10))
+console.log(countby2(2,5))
+
+/*
+Remove String Spaces
+Codeophrenia
+-16-
+*/
+console.log("-".repeat(55))
+/*
+Remove String Spaces
+Codeophrenia
+-16-
+*/
+console.log("-".repeat(55))
+
+let noSpace = (s)=>s.replaceAll(" ","");
+
+console.log(noSpace("8 l 5 ooooooooooooooo ddjm lk l "));
+console.log(noSpace("  ok snckoo o oo oooo ddjm  lll s  "));
+console.log(noSpace("oooo ddjm  lll s  "));
+
+console.log("-".repeat(55))
+
+let noSpace2 = (s)=>s.split(" ").join("");
+
+console.log(noSpace2("8 l 5 ooooooooooooooo ddjm lk l "));
+console.log(noSpace2("  ok snckoo o oo oooo ddjm  lll s  "));
+console.log(noSpace2("oooo ddjm  lll s  "));
+
+console.log("-".repeat(55))
+
+let noSpace3 = (s)=>[...s].filter((e)=>e !== " ").join("");
+
+console.log(noSpace3("8 l 5 ooooooooooooooo ddjm lk l "));
+console.log(noSpace3("  ok snckoo o oo oooo ddjm  lll s  "));
+console.log(noSpace3("oooo ddjm  lll s  "));
+
+
+/*
+    Invert Values
+Codeophrenia
+-17-
+*/
+console.log("-".repeat(55))
+
+function invertNumSign(...data){
+    return data.map((e)=>-e);
+}
+
+console.log(invertNumSign(1,2,3,4,5))
+console.log(invertNumSign(1,-2,3,-4,5))
+console.log(invertNumSign())
