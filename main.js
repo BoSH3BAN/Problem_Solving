@@ -578,8 +578,8 @@ console.log(noSpace3("oooo ddjm  lll s  "));
 
 /*
     Invert Values
-Codeophrenia
--17-
+    Codeophrenia
+    -17-
 */
 console.log("-".repeat(55))
 
@@ -590,3 +590,54 @@ function invertNumSign(...data){
 console.log(invertNumSign(1,2,3,4,5))
 console.log(invertNumSign(1,-2,3,-4,5))
 console.log(invertNumSign())
+
+
+
+/*
+    Convert Boolean Values To String "YES" Or "NO"
+    Codeophrenia
+    -18-
+*/
+
+function boolToWord(bool){
+    return bool === true ? "YES" :bool === false ? "NO":"No Boolean";
+}
+
+console.log(boolToWord(true))
+console.log(boolToWord(false))
+console.log(boolToWord())
+
+function boolToWord2(bool){
+    switch(bool){
+        case true:
+            return "YES";
+        break;
+        case false :
+            return "NO"
+        break;
+        default:
+            return "No Boolean";
+        break;
+    }
+}
+
+console.log(boolToWord2(true))
+console.log(boolToWord2(false))
+console.log(boolToWord2())
+
+
+/*
+    Reversing Words In A String
+    Codeophrenia
+    -19-
+*/
+
+function reverseString(string=""){
+    return string.split(" ").reverse().join(" ")
+}
+
+console.log(reverseString("Hello World"))
+console.log(reverseString("Hi There."))
+console.log(reverseString("1 2 3"))
+console.log(reverseString("1 m 5 ."))
+console.log(reverseString())
