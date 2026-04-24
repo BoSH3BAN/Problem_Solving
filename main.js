@@ -597,7 +597,8 @@ console.log(invertNumSign())
     Convert Boolean Values To String "YES" Or "NO"
     Codeophrenia
     -18-
-*/
+    */
+console.log("-".repeat(55))
 
 function boolToWord(bool){
     return bool === true ? "YES" :bool === false ? "NO":"No Boolean";
@@ -606,6 +607,8 @@ function boolToWord(bool){
 console.log(boolToWord(true))
 console.log(boolToWord(false))
 console.log(boolToWord())
+
+console.log("-".repeat(55))
 
 function boolToWord2(bool){
     switch(bool){
@@ -631,6 +634,7 @@ console.log(boolToWord2())
     Codeophrenia
     -19-
 */
+console.log("-".repeat(55))
 
 function reverseString(string=""){
     return string.split(" ").reverse().join(" ")
@@ -641,3 +645,5 @@ console.log(reverseString("Hi There."))
 console.log(reverseString("1 2 3"))
 console.log(reverseString("1 m 5 ."))
 console.log(reverseString())
+
+console.log("-".repeat(55))
