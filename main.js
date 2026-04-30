@@ -647,3 +647,85 @@ console.log(reverseString("1 m 5 ."))
 console.log(reverseString())
 
 console.log("-".repeat(55))
+
+/*
+    Keep Hydrated
+    Codeophrenia
+    -20-
+*/
+function litres(time){
+    return  Math.trunc(time*.5)
+}
+
+console.log(litres(12.5))
+console.log(litres(3))
+console.log(litres(6.7))
+console.log(litres(11.8))
+
+/*
+    Convert A Number TO A String
+    Codeophrenia
+    -21-
+*/
+
+function numberToString(num){
+    return num.toString()
+};
+
+console.log(numberToString(599))
+
+function numberToString2(num){
+    return String(num)
+};
+
+console.log(numberToString2(599))
+
+function numberToString3(num){
+    return `${num}`
+};
+
+console.log(numberToString3(599))
+
+
+
+/*
+    Calculate Average
+    Codeophrenia
+    -22-
+*/
+
+function findAverage(...arr){
+    let resault = arr.reduce((a,c)=>a+c,0);
+    return resault === 0 ? 0: resault / arr.length;
+};
+
+
+console.log(findAverage(1,8,6,2))
+console.log(findAverage())
+
+/*
+    Convert A String To Number
+    Codeophrenia
+    -23-
+*/
+
+function stringToNumber(str){
+    return Number(str)
+};
+
+console.log(stringToNumber("599"))
+console.log(stringToNumber("-599"))
+
+function stringToNumber2(str){
+    return +str
+};
+
+console.log(stringToNumber2("599"))
+console.log(stringToNumber2("-599"))
+
+function stringToNumber3(str){
+    return parseFloat(str)
+};
+
+console.log(stringToNumber3("599"))
+console.log(stringToNumber3("-599.66"))
