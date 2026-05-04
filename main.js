@@ -729,3 +729,82 @@ function stringToNumber3(str){
 
 console.log(stringToNumber3("599"))
 console.log(stringToNumber3("-599.66"))
+
+/*
+    Count The Monkeys
+    Codeophrenia
+    -24-
+*/
+function countMonkeys(n){
+    return n === undefined ? 0:Array.from(Array(n)).map((e,i)=>i+1);
+}
+
+console.log(countMonkeys(10))
+console.log(countMonkeys(1))
+console.log(countMonkeys(8))
+console.log(countMonkeys())
+
+console.log("/".repeat(10))
+
+function countMonkeys2(n){
+    let monkeysCounter = [];
+    for(i=1;i<=n;i++){
+        monkeysCounter.push(i)
+    }
+    return monkeysCounter.length === 0?0:monkeysCounter;
+}
+
+console.log(countMonkeys2(10))
+console.log(countMonkeys2(1))
+console.log(countMonkeys2(8))
+console.log(countMonkeys2(2))
+console.log(countMonkeys2())
+
+/*
+    Welcome!
+    Codeophrenia
+    -25-
+*/
+
+function greetForGuset(language){
+    const  sellectedLang = language.replaceAll(" ","").toLowerCase();
+    const myLanguges = {
+        english:"Welcome",
+        arabic:"مرحبا",
+        french:"Bienvenue",
+        german:"Willkommen",
+        italian:"Benvenuto"
+    };
+    const resault = Object.keys(myLanguges).filter((e)=>e === sellectedLang).join("");
+    return myLanguges[resault === ""?"english":resault] 
+};
+
+console.log(greetForGuset("  a Ra    B i c"))
+console.log(greetForGuset("  french"))
+console.log(greetForGuset("CHina"))
+console.log(greetForGuset(""))
+console.log(greetForGuset(" "))
+
+console.log("*".repeat(50))
+
+function greetForGuset2(language){
+    const  sellectedLang = language.replaceAll(" ","").toLowerCase();
+    const myLanguges = {
+        english:"Welcome",
+        arabic:"مرحبا",
+        french:"Bienvenue",
+        german:"Willkommen",
+        italian:"Benvenuto"
+    };
+    if(myLanguges.hasOwnProperty(sellectedLang)){
+        return myLanguges[sellectedLang]
+    }else{
+        return myLanguges["english"]
+    }
+};
+
+console.log(greetForGuset2("  a Ra    B i c"))
+console.log(greetForGuset2("  french"))
+console.log(greetForGuset2("CHina"))
+console.log(greetForGuset2(""))
+console.log(greetForGuset2(" "))
