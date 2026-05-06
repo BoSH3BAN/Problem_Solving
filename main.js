@@ -808,3 +808,108 @@ console.log(greetForGuset2("  french"))
 console.log(greetForGuset2("CHina"))
 console.log(greetForGuset2(""))
 console.log(greetForGuset2(" "))
+
+/*
+    Sentence Smash
+    Codeophrenia
+    -26-
+*/
+
+
+function smash(...words){
+    return words.join(" ")
+};
+
+console.log(smash("Hello","World","This","Is","Great"))
+
+/*
+    Switch It Up
+    Codeophrenia
+    -27-
+*/
+
+function switchItUp(number){
+    const switcher = {
+        0: "Zero",
+        1: "One",
+        2: "Two",
+        3: "Three",
+        4: "Four",
+        5: "Five",
+        6: "Six",
+        7: "Seven",
+        8: "Eight",
+        9: "Nine"
+    };
+    return switcher[number] || "Wrong Number";
+}
+
+
+console.log(switchItUp(1))
+console.log(switchItUp(10))
+console.log(switchItUp(3))
+console.log(switchItUp(5))
+console.log(switchItUp(8))
+console.log(switchItUp())
+
+function switchItUp2(number){
+    switch(number){
+        case 0:
+            return "Zero";
+        break;
+        case 1:
+            return "One";
+        break;
+        case 2:
+            return "Two";
+        break;
+        case 3:
+            return "Three";
+        break;
+        case 4:
+            return "Four";
+        break;
+        case 5:
+            return "Five";
+        break;
+        case 6:
+            return "Six";
+        break;
+        case 7:
+            return "Seven";
+        break;
+        case 8:
+            return "Eight";
+        break;
+        case 9:
+            return "Nine";
+        break;
+        default:
+            return "Wrong Number";
+        break;
+    }
+}
+
+console.log("/".repeat(66))
+console.log(switchItUp2(1))
+console.log(switchItUp2(10))
+console.log(switchItUp2(3))
+console.log(switchItUp2())
+
+
+/*
+    Do I Get A Bonus
+    Codeophrenia
+    -28-
+*/
+
+function bonusTime(salary,bonus){
+    return bonus ? `£${salary*10}`: `£${salary}` 
+}
+
+
+
+console.log(bonusTime(7000,true))
+console.log(bonusTime(1000,false))
+console.log(bonusTime(800,true))
+console.log(bonusTime(800,))
