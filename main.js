@@ -913,3 +913,37 @@ console.log(bonusTime(7000,true))
 console.log(bonusTime(1000,false))
 console.log(bonusTime(800,true))
 console.log(bonusTime(800,))
+
+/*
+    Exclamation marks
+    Codeophrenia
+    -29-
+*/
+
+function removeLastExclamation (string = ""){
+    return string.endsWith("!")?[...string].slice(0,-1).join(""):string;
+};
+
+
+console.log(removeLastExclamation("hi!"))
+console.log(removeLastExclamation("hi!!!"))
+console.log(removeLastExclamation("!hi"))
+console.log(removeLastExclamation("!hi!"))
+console.log(removeLastExclamation("hi! hi!"))
+console.log(removeLastExclamation("hi"))
+
+console.log("/".repeat(66))
+
+function removeLastExclamation2 (string = ""){
+    return string.replace(/!$/,"")
+};
+
+
+console.log(removeLastExclamation2("hi! "))
+console.log(removeLastExclamation2("hi!!!"))
+console.log(removeLastExclamation2("!hi"))
+console.log(removeLastExclamation2("!hi!"))
+console.log(removeLastExclamation2("hi! hi!"))
+console.log(removeLastExclamation2("hi"))
+
+
