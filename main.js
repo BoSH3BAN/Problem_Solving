@@ -946,4 +946,31 @@ console.log(removeLastExclamation2("!hi!"))
 console.log(removeLastExclamation2("hi! hi!"))
 console.log(removeLastExclamation2("hi"))
 
+console.log("/".repeat(55))
 
+
+
+/*
+    Are You Playing Banjo 
+    Codeophrenia
+    -30-
+*/
+
+function areYouPlayingBanjo(name=""){
+    return  name.startsWith("r") ||  name.startsWith("R")?`${name} Plays Banjo`:
+    `${name} Does Not Play Banjo`;
+}
+
+console.log(areYouPlayingBanjo("ramy"))
+console.log(areYouPlayingBanjo("Rima"))
+console.log(areYouPlayingBanjo("Sally"))
+
+console.log("/".repeat(55))
+function areYouPlayingBanjo2(name=""){
+    return  /^r/i.test(name)?`${name} Plays Banjo`:
+    `${name} Does Not Play Banjo`;
+}
+
+console.log(areYouPlayingBanjo2("ramy"))
+console.log(areYouPlayingBanjo2("Rima"))
+console.log(areYouPlayingBanjo2("Sally"))
