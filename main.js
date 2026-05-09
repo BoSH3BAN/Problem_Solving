@@ -974,3 +974,28 @@ function areYouPlayingBanjo2(name=""){
 console.log(areYouPlayingBanjo2("ramy"))
 console.log(areYouPlayingBanjo2("Rima"))
 console.log(areYouPlayingBanjo2("Sally"))
+
+
+/*
+    Removing Elements
+    Codeophrenia
+    -31-
+*/
+
+function removeEveryOther(...arr){
+    return  arr.filter((e,i)=>i%2 === 0)     
+};
+
+console.log(removeEveryOther("Keep","Remove","Keep","Remove","Keep","Remove"))
+
+console.log("*".repeat(55))
+
+function removeEveryOther2(...arr){
+    let newArr= [];
+    for(let i = 0 ; i<arr.length; i+=2){
+        newArr.push(arr[i])
+    }     
+    return newArr;
+};
+
+console.log(removeEveryOther2("Keep","Remove","Keep","Remove","Keep","Remove"))
