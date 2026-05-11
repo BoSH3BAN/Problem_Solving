@@ -999,3 +999,73 @@ function removeEveryOther2(...arr){
 };
 
 console.log(removeEveryOther2("Keep","Remove","Keep","Remove","Keep","Remove"))
+
+
+/*
+    Unfinished Loop
+    Codeophrenia
+    -32-
+*/
+
+console.log("*".repeat(55))
+
+
+function craeteArr(number){
+    let newArr = [];
+    for(let counter = 1 ; counter <= number ; counter ++ /* Final Expression */){
+        newArr.push(counter)
+    }
+    return newArr
+}
+
+console.log(craeteArr(5))
+
+
+/*
+    Transportation On Vacation
+    Codeophrenia
+    -33-
+*/
+
+console.log("*".repeat(55))
+
+
+function rentalCarCost(d=0){
+    let total = d*40;
+    if(d<3){
+        return `$${total}`
+    }else if(d<7){
+        return `$${total-= total*.20}` ;
+    }else{
+        return `$${total -= total*.50}`
+    }
+}
+
+
+console.log(rentalCarCost(2))
+console.log(rentalCarCost(3))
+console.log(rentalCarCost(7))
+console.log(rentalCarCost(8))
+
+
+/*
+    Exclusive Xor Operator
+    Codeophrenia
+    -34-
+*/
+console.log("*".repeat(55))
+
+function xor(a,b){
+    if(!a && !b || a && b){
+        return "Yes"
+    }else{
+        return "NO"
+    }
+};
+
+
+
+console.log(xor(true,true))
+console.log(xor(false,false))
+console.log(xor(false,true))
+console.log(xor(true,false))
