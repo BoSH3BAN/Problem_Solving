@@ -1063,9 +1063,68 @@ function xor(a,b){
     }
 };
 
-
-
 console.log(xor(true,true))
 console.log(xor(false,false))
 console.log(xor(false,true))
 console.log(xor(true,false))
+
+
+/*
+    Find The First Non Consecutive Number
+    Codeophrenia
+    -35-
+*/
+console.log("*".repeat(55))
+
+function firstNonConsecutive(...arr){
+    let value = arr[1]-arr[0];
+    let lastConsecutiveNumOrLastNum =  arr.reduce((a,c)=>c-a === value ? c:a)
+    return (arr.indexOf(lastConsecutiveNumOrLastNum) === arr.length-1?
+    null
+    :arr[arr.indexOf(lastConsecutiveNumOrLastNum)+1])    
+
+};
+;
+
+console.log(firstNonConsecutive(50,100,150,250,300))
+console.log(firstNonConsecutive(50,100,150,200,250))
+
+console.log("*".repeat(55))
+
+function firstNonConsecutive2(...arr){
+    for(let i = 1 ; i<arr.length;i++){
+        if(arr[i] - (arr[1]-arr[0]) !== arr[i-1]) return arr[i]
+    }return null
+};
+;
+
+console.log(firstNonConsecutive2(50,100,150,250,300))
+console.log(firstNonConsecutive2(50,100,150,200,250))
+
+
+/*
+    Volume Of A Cubiod
+    Codeophrenia
+    -36-
+*/
+
+
+
+console.log("*".repeat(55))
+
+
+class Kata {
+    static getVolumeOfCubiod(length,width,height){
+        return length*width*height
+    }
+    
+    doubleNum(num){
+        return num*2
+    }
+};
+
+
+console.log(Kata.getVolumeOfCubiod(1,2,2))
+console.log(Kata.getVolumeOfCubiod(6.3,2,5))
+
+
