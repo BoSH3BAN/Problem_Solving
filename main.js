@@ -1117,14 +1117,92 @@ class Kata {
     static getVolumeOfCubiod(length,width,height){
         return length*width*height
     }
-    
-    doubleNum(num){
-        return num*2
-    }
 };
 
 
 console.log(Kata.getVolumeOfCubiod(1,2,2))
 console.log(Kata.getVolumeOfCubiod(6.3,2,5))
 
+/*
+    Formatting To Decimal Places
+    Codeophrenia
+    -37-
+*/
+console.log("*".repeat(55))    
+
+function twoDecimalPlaces(n){
+    // Math.round(n*100)/100
+    return Number(n.toFixed(2))
+};
+
+
+
+console.log(twoDecimalPlaces(100.48962))
+
+
+// let myArrForTest =[1,2,3,5]
+
+// myArrForTest.forEach((e)=>{
+//     return(
+//         document.getElementById("my-div").appendChild(document.createElement("p")).append(e)
+//     )
+// })
+
+
+
+/*
+    Dollars And Cents
+    Codeophrenia
+    -38-
+*/
+
+
+function formatMoney(amount){
+    // "$"+amount.toFixed(2) 
+    return `$${amount.toFixed(2)}`
+};
+
+
+console.log(formatMoney(1))
+
+
+console.log("*".repeat(55))    
+
+/*
+    Find The Position
+    Codeophrenia
+    -39-
+*/
+
+function position(letter){
+    // `Position Of Alphabet : `+ (`abcdefghijklmnopqrstuvwxyz`.indexOf(letter)+1)
+    // `Position Of Alphabet : ${`abcdefghijklmnopqrstuvwxyz`.indexOf(letter)+1}`
+    return `Position Of Alphabet : ${`abcdefghijklmnopqrstuvwxyz`.match(RegExp(letter,"i")).index+1}`
+};
+
+
+
+console.log(position("A"))
+console.log(position("c"))
+console.log(position("n"))
+console.log(position("H"))
+
+
+
+/*
+    Opposites attract
+    Codeophrenia
+    -40-
+*/
+console.log("*".repeat(55))    
+
+function loveFunc(flower1,flower2){
+    return flower1 % 2 !== flower2 % 2 ;
+};
+
+
+console.log(loveFunc(1,4))
+console.log(loveFunc(2,2))
+console.log(loveFunc(5,8))
+console.log(loveFunc(3,7))
 
